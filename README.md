@@ -21,12 +21,13 @@ git clone git@github.com:dlavric/terraform-simple-null.git
 cd terraform-simple-null
 ```
 
-- Initialize the Terraform code
+- Run `terraform init`, to download any external dependency
 ```shell
 terraform init
 ```
 
 The output should look like this:
+
 ```shell
 Initializing the backend...
 
@@ -80,6 +81,11 @@ null_resource.null: Creating...
 null_resource.null: Creation complete after 0s [id=8645756374524357754]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+```
+
+- To confirm how many resources have been created
+```shell
+terraform state list
 ```
 
 - Destroy the instance
